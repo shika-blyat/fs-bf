@@ -24,7 +24,7 @@ let rec getAsciiChar () =
         then line.[0] |> int
         else getAsciiChar ()
 
-let rec eval liste mem ptr = match liste with 
+let rec eval list mem ptr = match list with 
                                 | (first::instrs) -> 
                                     match first with
                                         | Incr -> eval instrs (incrMem mem ptr) ptr
